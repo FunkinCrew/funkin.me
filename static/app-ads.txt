@@ -299,3 +299,5 @@ pubmatic.com, 164601, RESELLER, 5d62403b186f2ace
 google.com, pub-5060663379040713, RESELLER, f08c47fec0942fa0
 thebrave.io, 9840732, RESELLER, c25b2154543746ac
 video.unrulymedia.com, 123476257, RESELLER
+pangleglobal.com, 5032837, DIRECT
+pubmatic.com, 161490, RESELLER, 5d62403b186f2ace
