@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>WEEK OF 2026&#x2F;04&#x2F;21 - Introducing: The Camera Editor - Friday Night Funkin&#x27; - The Funkin&#x27; Crew Inc.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="https://funkin.me/styles/style.css" />
+  <meta property="og:title" content="WEEK OF 2026&#x2F;04&#x2F;21 - Introducing: The Camera Editor - Friday Night Funkin&#x27; - The Funkin&#x27; Crew Inc." />
+  <meta property="og:description" content="Hey funkBlog fans,
+It’s Hundrec, Production Manager for the Funkin’ Crew. Good to see you again!
+Since the release of Weekend 1 almost two years ago, we’ve used the modern Chart Editor to create charts. It was an exciting upgra…" />
+  <meta property="og:site_name" content="funkin.me">
+  <meta property="og:type" content="website" />
+  <meta property="og:image"
+    content="https://user-images.githubusercontent.com/22229331/213636577-8983e46c-fbf0-43e3-86e6-4797ae3ef59e.gif" /><meta property="og:url" content="https:&#x2F;&#x2F;funkin.me&#x2F;blog&#x2F;2026-04-21&#x2F;" /><meta name="theme-color" content="#ff1cb0">
+
+</head>
+
+<body class="flex flex-col">
+
+  
+  <!-- Just to keep whitespace lol! -->
+  
+  <!---->
+
+  <marquee scrolldelay="6" truespeed="true" scrollamount="1" class="text-gray-100">
+    friday night funkin' - the funkin' crew inc. 2026
+  </marquee>
+
+  <div class="max-w-5xl w-full mx-auto">
+    <nav class="flex max-sm:flex-col items-center gap-4 py-2 *:no-underline">
+      <a href="https:&#x2F;&#x2F;funkin.me" class="text-gray-50 grow">
+        <i class="i-mdi-home"></i>
+        The Funkin' Crew Inc.
+      </a>
+      <a href="https://kickstarter.funkin.me" target="_blank" class="text-gray-50">
+        Kickstarter Backer Portal
+        <i class="sm i-mdi-open-in-new"></i>
+      </a>
+      <a href="https://funkin.me/kickstarter-support/" class="text-gray-50">
+        Kickstarter Support
+      </a>
+      <a href="https://thekade.net/funkin-cookbook" target="_blank" class="text-gray-50">
+        Modding Tutorials
+        <i class="sm i-mdi-open-in-new"></i>
+      </a>
+      <a href="https://funkin.me/blog/" class="text-gray-50">Blog</a>
+      <a href="/atom.xml">
+        <i class="i-mdi-rss"></i>
+      </a>
+      <a href="https://github.com/FunkinCrew/funkin.me" target="_blank" class="text-gray-50">
+        <i class="i-mdi-github"></i>
+      </a>
+    </nav>
+
+    <marquee class="text-gray-100 my-4">
+      <em>
+        Latest blog post: <a href="https://funkin.me/blog/2026-08-03/">WEEK OF 2026&#x2F;08&#x2F;03 - Introducing: The Mod Menu</a>
+      </em>
+    </marquee>
+  </div>
+
+  <main class="max-w-5xl w-full mx-auto prose prose-invert px-2 sm:px-0 leading-6">
+    
+<article class="bg-gray-920 rounded p-8 mb-4">
+
+  <hgroup class="container mb-5">
+    <h1>WEEK OF 2026&#x2F;04&#x2F;21 - Introducing: The Camera Editor</h1>
+    <p>
+      8&nbsp;minute&nbsp;read
+      - Published&nbsp;on:&nbsp;2026&#x2F;04&#x2F;21
+    </p>
+  </hgroup>
+
+  <details class="sticky toc group">
+    <summary role="button">
+      Table of Contents
+      <i class="i-mdi-chevron-right group-open:i-mdi-chevron-down text-gray-200"></i>
+    </summary>
+    
+
+    <ul class="not-prose">
+      
+      <li>
+        <a href="https://funkin.me/blog/2026-04-21/#at-a-glance" onclick="close_toc()">At a glance</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://funkin.me/blog/2026-04-21/#the-stage-preview" onclick="close_toc()">The Stage Preview</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://funkin.me/blog/2026-04-21/#the-timeline" onclick="close_toc()">The Timeline</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://funkin.me/blog/2026-04-21/#the-properties-panel" onclick="close_toc()">The Properties Panel</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://funkin.me/blog/2026-04-21/#the-virtual-camera" onclick="close_toc()">The Virtual Camera</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://funkin.me/blog/2026-04-21/#what-does-this-mean-for-funkin" onclick="close_toc()">What does this mean for Funkin’?</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://funkin.me/blog/2026-04-21/#how-can-i-try-this-for-myself" onclick="close_toc()">How can I try this for myself?</a>
+        
+      </li>
+      
+    </ul>
+
+    
+  </details>
+
+  <p>Hey funkBlog fans,</p>
+<p>It’s Hundrec, Production Manager for the Funkin’ Crew. Good to see you again!</p>
+<p>Since the release of Weekend 1 almost two years ago, we’ve used the modern Chart Editor to create charts. It was an exciting upgrade from the legacy Chart Editor that was put together in just a few days.</p>
+<p>However, the new Chart Editor came with its fair share of issues. The character selector <a rel="external" href="https://github.com/FunkinCrew/Funkin/issues/2279">wouldn’t let you select characters</a>, event values would <a rel="external" href="https://github.com/FunkinCrew/Funkin/issues/2957">randomly get reset</a>, and the editor would crash after doing <a rel="external" href="https://github.com/FunkinCrew/Funkin/issues/2267">just</a> <a rel="external" href="https://github.com/FunkinCrew/Funkin/issues/2420">about</a> <a rel="external" href="https://github.com/FunkinCrew/Funkin/issues/3147">anything</a>. Fortunately, the Chart Editor is now much more stable after plenty of bug fixes (shoutout to our GitHub contributors!).<br><br><br></p>
+<p>But there was one thing that couldn’t be fixed… <strong>Camera Events</strong>.<br><br><br></p>
+<p>All of the events in a chart are displayed in a single column to the right of the note grid, which makes overlapping events very difficult to select. It’s also incredibly time-consuming to start a playtest over and over just to see what a Zoom Camera event looks like during the song. There are too many fundamental design issues with the Chart Editor to provide a smooth camera editing workflow, especially for event-heavy songs like SPAGHETTI by LE SSERAFIM <em>(468 events total)</em>.</p>
+<img src="/img/2026-04-21/Chart Editor Spaghetti events.png" style="width:300px;"/>
+</img>
+<div align="center">
+  <i><span>Look at all those events, and stacked ones too!</span></i><br><br>
+</div>
+<p>So with our director PhantomArcade demanding ever more impressive camera work, our programmer and visual designer <strong>fabs</strong> pitched and directed the development of a fancy new <strong>Camera Editor</strong> to make charting camera events as easy as possible.</p>
+<p>Stick around to the end to learn how you can try it out yourself!</p>
+<p>Now, let’s take a look at what makes the Camera Editor so easy (and even fun) to use!</p>
+<h2 id="h2-at-a-glance" class="relative">
+    <div class="absolute heading-anchor" id="at-a-glance"></div>
+    At a glance
+  </h2>
+  
+<p>Here’s the Camera Editor after loading in a chart:</p>
+<img src="/img/2026-04-21/Camera Editor Overview.png" style="width:1000px;"/>
+</img>
+<p>You can see the <strong>Stage Preview</strong> in the center, the <strong>Properties Panel</strong> to the right, and the <strong>Timeline</strong> at the bottom. There’s also a pretty <strong>Virtual Camera</strong> that shows where the camera would be during the song. Each of these components comes with lots of cool details!</p>
+<p>Different variations of the loaded .fnfc chart can be accessed under <strong>File &gt; Load Variation</strong>:</p>
+<img src="/img/2026-04-21/Camera Editor Variation.png" style="width:500px;"/>
+</img>
+<h2 id="h2-the-stage-preview" class="relative">
+    <div class="absolute heading-anchor" id="the-stage-preview"></div>
+    The Stage Preview
+  </h2>
+  
+<p>The Stage Preview shows the loaded chart’s characters singing notes and animations based on your position in the song. The characters sing the notes from the hardest difficulty of the current variation (Hard/Nightmare).</p>
+<p>The cool part is that the characters can sing <em>backwards</em> too! Scrubbing back and forth on the Timeline seamlessly updates the Stage Preview:</p>
+<img src="/img/2026-04-21/Stage Preview Scrubbing.gif" style="width:1000px;"/>
+</img>
+<p>You can pan around the Stage Preview using the middle mouse button, and zoom in and out with the scroll wheel:</p>
+<img src="/img/2026-04-21/Stage Preview Girlfriend.gif" style="width:1000px;"/>
+</img>
+<h2 id="h2-the-timeline" class="relative">
+    <div class="absolute heading-anchor" id="the-timeline"></div>
+    The Timeline
+  </h2>
+  
+<p>Let’s bring up the Timeline using the draggable splitter:</p>
+<img src="/img/2026-04-21/Timeline Splitter.gif" style="width:1000px;"/>
+</img>
+<p>The Timeline is where you view and place your camera events. Currently supported events include Focus Camera and Zoom Camera. Right click on the Timeline to add an event!</p>
+<p>Above the events are markers indicating the Section (measure) number you’d see in the Chart Editor, along with smaller beat and step markers. You can scrub to different parts of the song by clicking and dragging on this darker section, or by dragging the blue playhead.</p>
+<p>Excitingly, this Timeline has <strong>layers</strong>!
+When you load a chart for the first time, any existing camera events display on the Default layer. You can click the plus button to add as many new layers as you please. If the Timeline overflows with layers, you can hold Ctrl and scroll to navigate through them, or even middle click to pan around. Convenient!</p>
+<img src="/img/2026-04-21/Timeline Layers.gif" style="width:1000px;"/>
+</img>
+<p>You can also change the duration of events directly on the Timeline by dragging the ends of the event box! When the <strong>Snap</strong> setting is enabled, the event’s duration locks on to the nearest step (the tiny markers).</p>
+<img src="/img/2026-04-21/Timeline Snap.gif" style="width:800px;"/>
+</img>
+<p>And that’s just the start of it!</p>
+<p>The Timeline also features:</p>
+<ul>
+<li>
+<p>A <strong>Zoom level slider</strong> in the top right corner. You can either drag that slider, or hold Shift and scroll to view more or less of the Timeline at once.</p>
+</li>
+<li>
+<p>The standard suite of utilities including the multi-selection box and copy and paste, and an undo/redo history. Multi-select works by clicking and dragging anywhere on the Timeline area, and the other keyboard shortcuts use the key combos you’d expect from an editor (Ctrl + Z, Y, C, V).<br><br><br><br><br><br><br><br><br><br></p>
+</li>
+</ul>
+<p>Check out all of these features in action:</p>
+<img src="/img/2026-04-21/Timeline Select, Paste, and History.gif" style="width:1000px;"/>
+</img>
+<h2 id="h2-the-properties-panel" class="relative">
+    <div class="absolute heading-anchor" id="the-properties-panel"></div>
+    The Properties Panel
+  </h2>
+  
+<p>Playing around with events on the Timeline is fun and all, but we need a way to edit those events.</p>
+<p>Clicking on any individual event reveals the Properties Panel on the right, which displays all the same properties you would see in the Chart Editor Events window.</p>
+<img src="/img/2026-04-21/Properties Focus Camera.png" style="width:500px;"/>
+</img>
+<p>Like the Timeline, the Properties Panel comes with some quality of life features:</p>
+<ul>
+<li>Using the scroll wheel over numeric values easily adjusts Zoom, Duration, and Position.</li>
+<li>The Zoom value includes a handy slider with a range of common Zoom values.</li>
+</ul>
+<img src="/img/2026-04-21/Properties Scroll and Slide.gif" style="width:500px;"/>
+</img>
+<p>But what makes these adjustment methods <em>extra</em> cool is how they interact with…</p>
+<h2 id="h2-the-virtual-camera" class="relative">
+    <div class="absolute heading-anchor" id="the-virtual-camera"></div>
+    The Virtual Camera
+  </h2>
+  
+<p>The Virtual Camera (or VCam, for short) is the region inside the Stage Preview that is visible <strong>during gameplay</strong>.</p>
+<img src="/img/2026-04-21/VCam.png" style="width:1000px;"/>
+</img>
+<p>Being able to see where the camera is positioned is already a huge upgrade from the Chart Editor, but we added some extra touches to make it even more useful!</p>
+<p>During playback, the VCam moves and zooms according to the events in the Timeline. But if you edit the values of an event, the VCam updates based on your edits in real time!</p>
+<img src="/img/2026-04-21/VCam Live Update.gif" style="width:1000px;"/>
+</img>
+<p>That’s magical, and it doesn’t end there.</p>
+<img src="/img/2026-04-21/VCam View Toggles.png" style="width:300px;"/>
+</img>
+<ul>
+<li><strong>Relative View</strong> locks the VCam in place so that only the stage moves.</li>
+<li><strong>Show Extended Bounds</strong> expands the VCam to a 20:9 aspect ratio to show what’s visible on ultrawide Mobile displays.</li>
+<li><strong>Passepartout</strong> darkens the area outside the VCam so you can focus on what’s visible within its bounds. Kade affectionately calls this one “French word”.</li>
+</ul>
+<p><strong>Protip:</strong> Turning on Relative View and Passepartout on maximum darkness makes the Stage Preview look exactly as it does during gameplay.</p>
+<p>Put them all together and you get the ultimate Camera Editing experience!</p>
+<img src="/img/2026-04-21/VCam Trifecta.gif" style="width:1000px;"/>
+</img>
+<h2 id="h2-what-does-this-mean-for-funkin" class="relative">
+    <div class="absolute heading-anchor" id="what-does-this-mean-for-funkin"></div>
+    What does this mean for Funkin’?
+  </h2>
+  
+<p>Now that we’ve made the Camera Editor, production for all future levels will benefit from this enhanced workflow. Charting camera events will actually be fun, and fabs will never have to painstakingly place 468 events in the Chart Editor again. Woohoo!</p>
+<h2 id="h2-how-can-i-try-this-for-myself" class="relative">
+    <div class="absolute heading-anchor" id="how-can-i-try-this-for-myself"></div>
+    How can I try this for myself?
+  </h2>
+  
+<p>The Camera Editor will only be officially released with the next major update, but you can try it <strong>right now</strong> in a series of test builds we will be releasing.</p>
+<p>Here is the first test build for Windows: <a rel="external" href="https://drive.google.com/file/d/1NPtwOJ_biGAcMc5GPASZwWE1nP0JBQTJ/view?usp=sharing">[WINDOWS] Camera Editor Preview #1</a></p>
+<p>And for the Mac users: <a rel="external" href="https://drive.google.com/file/d/1dW59onhtdowu8UTSMaTODl32-lUWbKTs/view?usp=sharing">[MACOS] Camera Editor Preview #1</a></p>
+<p>We invite you to download this build, play around with the editor, and give us your feedback! You can contribute to development by reporting bugs and leaving suggestions on our <a rel="external" href="https://github.com/FunkinCrew/Funkin/issues">GitHub issues page</a>.</p>
+<p>As we continue to work on the next major update, we will improve the Camera Editor with more features, bugfixes, and community contributions. Future test builds will be announced on my Twitter account <a rel="external" href="https://x.com/Hundrec">@Hundrec</a>.</p>
+<p>Here’s a sneak peek at support for more event types, which Kade is preparing for a future test build:</p>
+<img src="/img/2026-04-21/Camera Editor Spaghetti Singing.gif" style="width:1000px;"/>
+</img>
+<p>And here’s the SiIvaGunner rip I used in my example chart for this post. It’s a good one!</p>
+<div >
+  <iframe style=" width: 100%; height: 480px;"
+    src="https://www.youtube-nocookie.com/embed/XDRqU5d90zk"
+    webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+<p>Have fun!<br>
+<em>Hundrec</em> 💯</p>
+
+
+  <script>
+    const toc = document.getElementsByClassName('sticky toc')[0];
+    const close_toc = () => toc.open = false;
+
+    const h1 = document.getElementsByTagName('h1');
+  </script>
+
+</article>
+
+<div class="flex flex-row gap-2 my-4">
+
+  
+  <button type="button" width="100%" onclick="window.location.href='https:&#x2F;&#x2F;funkin.me&#x2F;blog&#x2F;2026-01-03&#x2F;'" class="px-4 py-3 bg-primary text-white rounded-lg grow basis-0">
+    Previous Post <br> The LE SSERAFIM Special Collab is now available!
+  </button>
+  
+
+  <button type="button" width="100%" onclick="window.location.href='https://funkin.me/blog/'" class="px-4 py-3 bg-primary text-white rounded-lg grow basis-0">
+    Return to blog
+  </button>
+
+  
+  <button type="button" width="100%" onclick="window.location.href='https:&#x2F;&#x2F;funkin.me&#x2F;blog&#x2F;2026-08-03&#x2F;'" class="px-4 py-3 bg-primary text-white rounded-lg grow basis-0">
+    Next Post <br> WEEK OF 2026&#x2F;08&#x2F;03 - Introducing: The Mod Menu
+  </button>
+  
+
+</div>
+
+
+  </main>
+
+  <footer class="my-8">
+    <div class="flex flex-row justify-center gap-1">
+      <a href="https://www.youtube.com/@FNF_Developers">
+        <i class="i-mdi-youtube"></i>
+      </a>
+      <a href="https://x.com/fnf_developers">
+        <i class="i-mdi-twitter"></i>
+      </a>
+      <a href="https://github.com/FunkinCrew">
+        <i class="i-mdi-github"></i>
+      </a>
+    </div>
+    <!--div align='center'>
+      <a href='https://www.free-website-hit-counter.com'>
+        <img src='https://www.free-website-hit-counter.com/c.php?d=9&id=145132&s=36' border='0'
+          alt='Free Website Hit Counter'>
+      </a>
+      <br />
+      <small>
+        <a href='https://www.free-website-hit-counter.com' title="Free Website Hit Counter">
+          Free website hit counter
+        </a>
+      </small>
+  </div-->
+  </footer>
+
+</body>
+
+</html>
