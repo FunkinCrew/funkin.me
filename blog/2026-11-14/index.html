@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>WEEK OF 2026&#x2F;11&#x2F;14 - Programmer Presentation - Public Playtesting for Preview #4 - Friday Night Funkin&#x27; - The Funkin&#x27; Crew Inc.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="https://funkin.me/styles/style.css" />
+  <meta property="og:title" content="WEEK OF 2026&#x2F;11&#x2F;14 - Programmer Presentation - Public Playtesting for Preview #4 - Friday Night Funkin&#x27; - The Funkin&#x27; Crew Inc." />
+  <meta property="og:description" content="Hey funkBlog fans,
+It’s Hundrec, Production Manager for the Funkin’ Crew. I’m glad you’re here!
+Today, we’re releasing our newest public playtesting build on all platforms: Feature Preview #4.
+Thanks to …" />
+  <meta property="og:site_name" content="funkin.me">
+  <meta property="og:type" content="website" />
+  <meta property="og:image"
+    content="https://user-images.githubusercontent.com/22229331/213636577-8983e46c-fbf0-43e3-86e6-4797ae3ef59e.gif" /><meta property="og:url" content="https:&#x2F;&#x2F;funkin.me&#x2F;blog&#x2F;2026-11-14&#x2F;" /><meta name="theme-color" content="#ff1cb0">
+
+</head>
+
+<body class="flex flex-col">
+
+  
+  <!-- Just to keep whitespace lol! -->
+  
+  <!---->
+
+  <marquee scrolldelay="6" truespeed="true" scrollamount="1" class="text-gray-100">
+    friday night funkin' - the funkin' crew inc. 2026
+  </marquee>
+
+  <div class="max-w-5xl w-full mx-auto">
+    <nav class="flex max-sm:flex-col items-center gap-4 py-2 *:no-underline">
+      <a href="https:&#x2F;&#x2F;funkin.me" class="text-gray-50 grow">
+        <i class="i-mdi-home"></i>
+        The Funkin' Crew Inc.
+      </a>
+      <a href="https://kickstarter.funkin.me" target="_blank" class="text-gray-50">
+        Kickstarter Backer Portal
+        <i class="sm i-mdi-open-in-new"></i>
+      </a>
+      <a href="https://funkin.me/kickstarter-support/" class="text-gray-50">
+        Kickstarter Support
+      </a>
+      <a href="https://thekade.net/funkin-cookbook" target="_blank" class="text-gray-50">
+        Modding Tutorials
+        <i class="sm i-mdi-open-in-new"></i>
+      </a>
+      <a href="https://funkin.me/blog/" class="text-gray-50">Blog</a>
+      <a href="/atom.xml">
+        <i class="i-mdi-rss"></i>
+      </a>
+      <a href="https://github.com/FunkinCrew/funkin.me" target="_blank" class="text-gray-50">
+        <i class="i-mdi-github"></i>
+      </a>
+    </nav>
+
+    <marquee class="text-gray-100 my-4">
+      <em>
+        Latest blog post: <a href="https://funkin.me/blog/2026-11-14/">WEEK OF 2026&#x2F;11&#x2F;14 - Programmer Presentation - Public Playtesting for Preview #4</a>
+      </em>
+    </marquee>
+  </div>
+
+  <main class="max-w-5xl w-full mx-auto prose prose-invert px-2 sm:px-0 leading-6">
+    
+<article class="bg-gray-920 rounded p-8 mb-4">
+
+  <hgroup class="container mb-5">
+    <h1>WEEK OF 2026&#x2F;11&#x2F;14 - Programmer Presentation - Public Playtesting for Preview #4</h1>
+    <p>
+      22&nbsp;minute&nbsp;read
+      - Published&nbsp;on:&nbsp;2026&#x2F;11&#x2F;14
+    </p>
+  </hgroup>
+
+  <details class="sticky toc group">
+    <summary role="button">
+      Table of Contents
+      <i class="i-mdi-chevron-right group-open:i-mdi-chevron-down text-gray-200"></i>
+    </summary>
+    
+
+    <ul class="not-prose">
+      
+      <li>
+        <a href="https://funkin.me/blog/2026-11-14/#one-click-installation" onclick="close_toc()">One-Click Installation</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://funkin.me/blog/2026-11-14/#cppia-scripting" onclick="close_toc()">CPPIA scripting</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://funkin.me/blog/2026-11-14/#generational-gc" onclick="close_toc()">Generational GC</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://funkin.me/blog/2026-11-14/#asset-handoff-system" onclick="close_toc()">Asset Handoff System</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://funkin.me/blog/2026-11-14/#quick-menu-and-debug-menu" onclick="close_toc()">Quick Menu, and… Debug Menu?!</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://funkin.me/blog/2026-11-14/#camera-editor-camera-schmeditor" onclick="close_toc()">Camera Editor, Camera Schmeditor</a>
+        
+        <ul>
+          
+          <li>
+            <a href="https://funkin.me/blog/2026-11-14/#faster-faster" onclick="close_toc()">Faster... Faster!</a>
+          </li>
+          
+          <li>
+            <a href="https://funkin.me/blog/2026-11-14/#this-timeline-is-so-smooth" onclick="close_toc()">This timeline is so smooth</a>
+          </li>
+          
+          <li>
+            <a href="https://funkin.me/blog/2026-11-14/#preferences" onclick="close_toc()">Preferences</a>
+          </li>
+          
+          <li>
+            <a href="https://funkin.me/blog/2026-11-14/#c-c-custom-events" onclick="close_toc()">C-C-Custom events?</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="https://funkin.me/blog/2026-11-14/#chart-editor-overhaul" onclick="close_toc()">Chart Editor Overhaul</a>
+        
+        <ul>
+          
+          <li>
+            <a href="https://funkin.me/blog/2026-11-14/#the-grid-is-gone" onclick="close_toc()">The grid… is gone?</a>
+          </li>
+          
+          <li>
+            <a href="https://funkin.me/blog/2026-11-14/#ui-overhaul" onclick="close_toc()">UI Overhaul</a>
+          </li>
+          
+          <li>
+            <a href="https://funkin.me/blog/2026-11-14/#and-more" onclick="close_toc()">And more?</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="https://funkin.me/blog/2026-11-14/#convenience-and-collaboration-in-the-chart-editor" onclick="close_toc()">Convenience and Collaboration in the Chart Editor</a>
+        
+        <ul>
+          
+          <li>
+            <a href="https://funkin.me/blog/2026-11-14/#command-palette" onclick="close_toc()">Command Palette</a>
+          </li>
+          
+          <li>
+            <a href="https://funkin.me/blog/2026-11-14/#comments" onclick="close_toc()">Comments</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="https://funkin.me/blog/2026-11-14/#asynchronous-loading-screens" onclick="close_toc()">Asynchronous Loading Screens</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://funkin.me/blog/2026-11-14/#loading-screen-characters" onclick="close_toc()">Loading Screen Characters</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://funkin.me/blog/2026-11-14/#polymod-upgrades" onclick="close_toc()">Polymod Upgrades</a>
+        
+        <ul>
+          
+          <li>
+            <a href="https://funkin.me/blog/2026-11-14/#extend-anything-and-everything" onclick="close_toc()">EXTEND ANYTHING AND EVERYTHING!</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="https://funkin.me/blog/2026-11-14/#how-can-i-try-this-for-myself" onclick="close_toc()">How can I try this for myself?</a>
+        
+      </li>
+      
+    </ul>
+
+    
+  </details>
+
+  <p>Hey funkBlog fans,</p>
+<p>It’s Hundrec, Production Manager for the Funkin’ Crew. I’m glad you’re here!</p>
+<p>Today, we’re releasing our newest public playtesting build on all platforms: <strong>Feature Preview #4</strong>.</p>
+<p>Thanks to your feedback and testing since Preview #3, we (and our Contributors on GitHub) have made a ton of fixes, changes, and additions to the Mod Menu and the game as a whole!</p>
+<p>This new build contains so many new features and optimizations that I invited our programmers <strong>Kade</strong>, <strong>MoonDroid</strong>, <strong>EliteMasterEric</strong>, and <strong>AbnormalPoof</strong> to give you a rundown of some of their latest work.</p>
+<p>Enjoy the tour!</p>
+<h2 id="h2-one-click-installation" class="relative">
+    <div class="absolute heading-anchor" id="one-click-installation"></div>
+    One-Click Installation
+  </h2>
+  
+<p>Suppose you could install a mod with just one click of a button. That's been the case if you've used a mod manager for, well, any game ever.</p>
+<p>Well now it’s finally coming to Friday Night Funkin'! Now available on GameBanana, usable with our newest preview build: <strong>The One-Click Install Button</strong>.</p>
+<img src="/img/2026-11-14/pre4 One Click Installation.png" style="width:400px;"/>
+</img>
+<img src="/img/2026-11-14/pre4 One Click Installation button.png" style="width:1000px;"/>
+</img>
+<p>Yep, it's me, <strong>Kade</strong>.</p>
+<p>I have been hard at work on streamlining the process of modding for the last couple of months. With this one click installer, it should be easy to install mods on both Desktop and Mobile. With just one click, you can launch the game and install a mod (or install it directly if it’s already open). Now you can get your mods fast and hot with auto-downloading for dependencies specified by the mod itself.</p>
+<h2 id="h2-cppia-scripting" class="relative">
+    <div class="absolute heading-anchor" id="cppia-scripting"></div>
+    CPPIA scripting
+  </h2>
+  
+<p><em>by Kade</em></p>
+<p>Not only that, but we also have fabled CPPIA script support! This scripting backend gives high-performance gains with some shiny new crash handling to make mods more stable and easier to debug. On simple tasks, CPPIA is about <strong>31x as fast</strong> as HScript. On more complex tasks, you can see quite a dramatic increase in FPS (I've gone from 70fps on HScript to around 400fps on CPPIA). With less overhead, optimizations are easier to make, and I was able to get to around 800-1000fps with per-frame operations on CPPIA (best case scenarios). This absolutely blows HScript out of the water, several times over.</p>
+<p>Go check out the <a rel="external" href="https://thekade.net/funkin-cookbook/category/expert/08.compilingscripts.html">Cookbook article</a> on compiling scripts to find out more. (advanced kids only)</p>
+<p>This might be the last batch of new modding features I can get through before the next content update, but we'll still be working to improve the experience for modders as we go. It's always on our mind.</p>
+<h2 id="h2-generational-gc" class="relative">
+    <div class="absolute heading-anchor" id="generational-gc"></div>
+    Generational GC
+  </h2>
+  
+<p><em>by Kade</em></p>
+<p>Generational GC? What is it? It’s cool ass Garbage Collection!</p>
+<p>Garbage collection is a process when the game cleans up unused stuff, freeing up resources so your computer runs the game awesome and fast. This should resolve the biggest problem the game has ever had: GC Stutters, where the game freezes for a bit mid-song to collect garbage. It now handles this much better by taking small snippets over time instead of doing it all at once. So, goodbye stutters!</p>
+<p>It's an experimental system ya'see! So we're testing it here to iron out the bugs with it before it goes into the main game. Make sure to report those bugs and give us those crash logs!</p>
+<h2 id="h2-asset-handoff-system" class="relative">
+    <div class="absolute heading-anchor" id="asset-handoff-system"></div>
+    Asset Handoff System
+  </h2>
+  
+<p>Hey, <strong>Moon</strong>, mobile lead dev here intruding into this blog hehe. Remember that purging system concept we had a while ago? After some tinkering, we found out some assets would slip in and stay inside memory. A clean purge was impossible…</p>
+<p>Until now! I approached this differently and finally fixed that fatal flaw. To put it in a way even the average joe understands: every time you move states, unused assets are gone. Not a single one stays. “But how?! How did you do it? I must know!” Heheh.</p>
+<p>Once a state transition begins, we prepare the cache for purging. When it ends and everything gets queried, we mark everything as unwanted, re-request assets we want to keep between states to un-mark them, then sweep the rest out of memory while handing off the remaining and newly queried assets to the next state.</p>
+<p>So I guess it’s more of a “mark and sweep” system? And it's global across every state transition, meaning (and I promise you) assets we aren't using anymore will NEVER stay in memory. We're talking an all-time low in GC memory, even within story levels! It should almost always average around 300 MB, give or take a hundred or two hehehe.</p>
+<h2 id="h2-quick-menu-and-debug-menu" class="relative">
+    <div class="absolute heading-anchor" id="quick-menu-and-debug-menu"></div>
+    Quick Menu, and… Debug Menu?!
+  </h2>
+  
+<p><em>by Moon</em></p>
+<p>And the memory optimizations are not all! I’ve remade the Quick Menu’s code to be easily moddable. Before, the data and such was hardcoded, so adding your own button or panel ID was a hassle…</p>
+<p>But now all you need to do is press a few magic buttons and it will work!</p>
+<p>This allowed me to repurpose the Quick Menu to list the debug editors in the Main Menu!</p>
+<img src="/img/2026-11-14/pre4 debug menu.gif" style="width:1000px;"/>
+</img>
+<p>As for modding, I tried to make it as simple and as modder-friendly as possible. Not only are buttons soft-coded, but they’re also scriptable! You can have a .hxc and a .json button set to any kind of panel ID, giving you the freedom to do anything with the side panel buttons.</p>
+<p>More icon types are also supported now! You no longer need to jump through hoops to make an animated panel icon, hehe! Here’s a showcase of that, with a little help from Keoiki’s <strong><a rel="external" href="https://gamebanana.com/mods/655831">Pointless Pins</a></strong>! (Grab the mod’s new update to try this for yourself)</p>
+<img src="/img/2026-11-14/pre4 pointless pins.gif" style="width:1000px;"/>
+</img>
+<p>This overhaul also fixes a bunch of bugs such as the panel overriding some of the current state’s values and the menu sometimes locking inputs, etc.</p>
+<p>Whole thing is super optimized too, as a little cherry on top teehee.</p>
+<h2 id="h2-camera-editor-camera-schmeditor" class="relative">
+    <div class="absolute heading-anchor" id="camera-editor-camera-schmeditor"></div>
+    Camera Editor, Camera Schmeditor
+  </h2>
+  
+<p><em>by Kade</em></p>
+<p>Oh the Camera Editor, we didn't forget about you! We have given the Camera Editor some much needed improvements, like:</p>
+<h3 id="h3-faster-faster" class="relative">
+    <div class="absolute heading-anchor" id="faster-faster"></div>
+    Faster... Faster!
+  </h3>
+  
+<p>The Camera Editor is now much more optimized when navigating the timeline, applying properties, and moving events. It's still not 100% where we want it to be (as showing a LOT of events at once tends to lag), but we're getting there.</p>
+<h3 id="h3-this-timeline-is-so-smooth" class="relative">
+    <div class="absolute heading-anchor" id="this-timeline-is-so-smooth"></div>
+    This timeline is so smooth
+  </h3>
+  
+<p>The timeline now allows you to scroll way better, smooth scrolling for all of your scrolling scrolls. Individual scrolling for the layers and adjustable layer height, better zoom smoothing and larger zoom values, plus more intuitive ways to move events around in the timeline.</p>
+<p><em>Quick tip: Press Shift + Up/Down/Left/Right arrow keys to move selected events with your KEYBOARD!</em></p>
+<h3 id="h3-preferences" class="relative">
+    <div class="absolute heading-anchor" id="preferences"></div>
+    Preferences
+  </h3>
+  
+<p>Along with the Chart Editor, your preferences are now inside of the preferences of the preferences window inside of the file menubar. That's a <em>lot</em> of preferences.</p>
+<img src="/img/2026-11-14/pre4 Camera preferences.png" style="width:1000px;"/>
+</img>
+<h3 id="h3-c-c-custom-events" class="relative">
+    <div class="absolute heading-anchor" id="c-c-custom-events"></div>
+    C-C-Custom events?
+  </h3>
+  
+<p>That's right! The real purpose for this entire editor’s existence is actually in the game now! Custom Events are a way to have song events (that aren't your simple zooming or focusing) inside of the editor. You can preview them, ease them, reverse them, and beat them to smithereens if you really want to <em>(we won't judge!)</em></p>
+<img src="/img/2026-11-14/pre4 Camera custom event parameters.png" style="width:450px;"/>
+</img>
+<h4 id="h4-how-do-i-go-about-adding-these" class="relative">
+    <div class="absolute heading-anchor" id="how-do-i-go-about-adding-these"></div>
+    How do I go about adding these?
+  </h4>
+  
+<p>These events can be added in the Chart Editor OR Camera Editor, but we recommend using the Camera Editor just because you can see it happen in real time!</p>
+<img src="/img/2026-11-14/pre4 Camera custom event create.png" style="width:1000px;"/>
+</img>
+<p>These events can be snapped, resized, and bent to your will like any other event - and they even get a cool neat icon based on the name of the event itself.</p>
+<img src="/img/2026-11-14/pre4 Camera custom event label.png" style="width:600px;"/>
+</img>
+<p>While I would love to bore you about <em>how</em> to script these bad boys, that's better done through the <a rel="external" href="https://thekade.net/funkin-cookbook/category/advanced/07.customevents.html">Cookbook article</a>! Go check it out.</p>
+<h2 id="h2-chart-editor-overhaul" class="relative">
+    <div class="absolute heading-anchor" id="chart-editor-overhaul"></div>
+    Chart Editor Overhaul
+  </h2>
+  
+<p><em>by Kade</em></p>
+<p>While working to create a better modding experience for all, we've been looking to bring our editors up to speed. So not only have we improved the Camera Editor quite a bit, but we also upgraded the one most in need of changes: The Chart Editor.</p>
+<h3 id="h3-the-grid-is-gone" class="relative">
+    <div class="absolute heading-anchor" id="the-grid-is-gone"></div>
+    The grid… is gone?
+  </h3>
+  
+<p>The grid has been with the Chart Editor for a very long time, all the way since the beginning. While we understand how much the grid means to people (for both its functionality and personality) - we have brought our editor up to par with other top-of-the-line charting programs in favor of a waveform-based workflow.</p>
+<h4 id="h4-the-waveform-v2" class="relative">
+    <div class="absolute heading-anchor" id="the-waveform-v2"></div>
+    The waveform v2
+  </h4>
+  
+<img src="/img/2026-11-14/pre4 Chart waveforms.png" style="width:1000px;"/>
+</img>
+<p><em>"How do you chart without the grid?"</em></p>
+<p>While the grid was helpful (without a waveform) it was ultimately not the source of truth for the timing of the vocals of a song. It was limited to 1/16th snaps, not aligned to a waveform, and stretched weirdly when zoomed. Considering the drawbacks of using a grid, the waveform approach was the most logical and simplest solution we could think of.</p>
+<img src="/img/2026-11-14/pre4 Chart waveforms closeup.png" style="width:600px;"/>
+</img>
+<p>Like actual gameplay, notes in the Chart Editor are now hit in the center of the note rather than the top. Zooming in with <code>Ctrl+Mouse Wheel</code>, you can see that the center of the note almost lines up with the waveform. You can also see beat lines and snap lines based on your current snap value. This down note is just a tiny bit early, so pressing <code>B</code> allows you to move the note freely regardless of your snap. It’s never been easier to chart any song, especially those with irregular rhythms.</p>
+<h3 id="h3-ui-overhaul" class="relative">
+    <div class="absolute heading-anchor" id="ui-overhaul"></div>
+    UI Overhaul
+  </h3>
+  
+<p>Most of the UI has been fully reworked, extraneous options have been moved to the new Preferences window, and toolboxes have been cleaned up.</p>
+<img src="/img/2026-11-14/pre4 Chart toolboxes.png" style="width:1200px;"/>
+</img>
+<p>Some highlights to check out:</p>
+<h4 id="h4-time-changes-and-difficulties" class="relative">
+    <div class="absolute heading-anchor" id="time-changes-and-difficulties"></div>
+    Time Changes and Difficulties
+  </h4>
+  
+<p>Time changes have been separated from the Metadata window into their own <strong>Timing</strong> window, allowing for more precise control and ordering of timing points and signature changes. Many bugs with these have also been fixed.</p>
+<img src="/img/2026-11-14/pre4 Chart timing.png" style="width:700px;"/>
+</img>
+<p>Difficulties have also gotten a major glow up, showing unlisted difficulties like Pico’s chart in Stress, a difficulty estimator, and a better way of managing variations and charts themselves. You can even right click on a variation or difficulty for more options!</p>
+<img src="/img/2026-11-14/pre4 Chart difficulty.png" style="width:500px;"/>
+</img>
+<h4 id="h4-notekinds-and-event-chains" class="relative">
+    <div class="absolute heading-anchor" id="notekinds-and-event-chains"></div>
+    Notekinds and Event Chains
+  </h4>
+  
+<p>Double-clicking on notes and events now opens the menu relating to that object.</p>
+<p>Notekinds now show a colorful list of all available notekinds, the number of each in the current chart, and even custom notekinds at the bottom of the list!</p>
+<img src="/img/2026-11-14/pre4 Chart notekinds.png" style="width:1000px;"/>
+</img>
+<p>Previously, multiple events placed at the same time in the chart just took up the same square with no discernible way of selecting or editing them. While we plan to turn the Camera Editor into a more general "Event Editor," there should still be a better way to edit stacked events in the Chart Editor. Now we have Event Chains, which allow you to group events together and individually edit each event.</p>
+<img src="/img/2026-11-14/pre4 Chart event chains.png" style="width:800px;"/>
+</img>
+<h4 id="h4-preferences-and-instrumental-waveform" class="relative">
+    <div class="absolute heading-anchor" id="preferences-and-instrumental-waveform"></div>
+    Preferences and Instrumental Waveform
+  </h4>
+  
+<p>Your charting preferences are now accurately saved, and you can customize the editor more than ever before through the new Preferences window.</p>
+<img src="/img/2026-11-14/pre4 Chart preferences.png" style="width:600px;"/>
+</img>
+<p>Under the Display tab, you can switch between light and dark themes…</p>
+<img src="/img/2026-11-14/pre4 Chart light theme.png" style="width:1000px;"/>
+</img>
+<p>…or switch between viewing instrumental and vocal waveforms. Also, the instrumental is automatically visible when the loaded song has no vocals (like Blazin’).</p>
+<img src="/img/2026-11-14/pre4 Chart instrumental waveform.png" style="width:1000px;"/>
+</img>
+<h3 id="h3-and-more" class="relative">
+    <div class="absolute heading-anchor" id="and-more"></div>
+    And more?
+  </h3>
+  
+<p>There are so many more features that I can't describe them in detail, so look out in the Chart Editor for:</p>
+<ul>
+<li>UI Scale slider and better scaling for full screen</li>
+<li>Streamlined interfaces for setting Song Offset and Freeplay Preview</li>
+<li>Constant Scroll speed in editor</li>
+<li>Scroll Velocity event (change note speed without changing spacing)</li>
+<li>Render Distance event (change how far incoming notes stop rendering)</li>
+<li>Difficulty heatmap (show what the new difficulty calculator thinks is hard in a song, in real-time!)</li>
+<li>General improvements to workflow (with even more to come!)</li>
+</ul>
+<p>We are looking to improve the Chart Editor further, so please let us know any issues or suggestions you have! We look forward to hearing what you have to say.</p>
+<h2 id="h2-convenience-and-collaboration-in-the-chart-editor" class="relative">
+    <div class="absolute heading-anchor" id="convenience-and-collaboration-in-the-chart-editor"></div>
+    Convenience and Collaboration in the Chart Editor
+  </h2>
+  
+<p>Hey, it's <strong>Eric</strong>, developer of the Chart Editor. As the charting team started working on more charts for the update internally, I wanted to take some time to add some features I've been meaning to add to the Chart Editor to improve the team's productivity when collaborating on charts.</p>
+<p>These features actually got into Feature Preview #3, but I never wrote about them so not a lot of people know about them.</p>
+<img src="/img/2026-11-14/pre4 Chart Editor overview.png" style="width:1200px;"/>
+</img>
+<h3 id="h3-command-palette" class="relative">
+    <div class="absolute heading-anchor" id="command-palette"></div>
+    Command Palette
+  </h3>
+  
+<p>The first feature to discuss is the Command Palette. This feature is <del>blatantly stolen from</del> inspired by Visual Studio Code. From here, you have access to <strong>all functionality within the Chart Editor</strong> from a convenient, keyboard-navigable interface without needing to memorize keyboard shortcuts.</p>
+<p>Press <code>Ctrl+P</code> to see all the modes you can use.</p>
+<img src="/img/2026-11-14/pre4 Command Palette.png" style="width:1000px;"/>
+</img>
+<p>Typing <code>&gt;</code> into the field (or pressing <code>Ctrl+Shift+P</code>) lets you scroll a list of all the commands in the editor, and typing further lets you filter them by name. You can also easily reference their keyboard shortcuts here, and you can click (or navigate with the arrows and press <code>ENTER</code>) to perform the command.</p>
+<img src="/img/2026-11-14/pre4 Commands.png" style="width:1000px;"/>
+</img>
+<p>Type <code>:</code> into the field (or press <code>Ctrl+G</code>), then specify a number and press <code>ENTER</code> to jump to a specific section of the current chart.</p>
+<img src="/img/2026-11-14/pre4 Measures.png" style="width:1000px;"/>
+</img>
+<p>Type <code>%</code> into the field (or press <code>Ctrl+W</code>), then navigate and press <code>ENTER</code> to open a specific Toolbox without having to use the mouse to open the menu.</p>
+<img src="/img/2026-11-14/pre4 Toolboxes.png" style="width:1000px;"/>
+</img>
+<p>There's one more mode for the Command Palette that we'll cover later.</p>
+<h3 id="h3-comments" class="relative">
+    <div class="absolute heading-anchor" id="comments"></div>
+    Comments
+  </h3>
+  
+<p>The other new major feature is focused on tracking progress and feedback, both for remembering your place and for collaborating with others: <strong>Comments</strong>.</p>
+<img src="/img/2026-11-14/pre4 Comments list.png" style="width:800px;"/>
+</img>
+<p>Press <code>Alt + B</code> to place a comment at the playhead position. There is a multi-line text field you can fill with any feedback you want to leave, as a reminder for yourself or feedback for a collaborator. You can see the text for the comment nearest to the playhead position.</p>
+<p>There are several control buttons on the comment, allowing you to change a comment's color or delete it. Colors are great for indicating a specific type of feedback, or the author of the feedback.</p>
+<p>Comments get included along with your chart data when you save.</p>
+<img src="/img/2026-11-14/pre4 Color Picker.png" style="width:800px;"/>
+</img>
+<p>You can see pins along the note preview for all the comments in the chart, and click them to immediately jump to that position. Pins display in the color you configured for the comment.</p>
+<img src="/img/2026-11-14/pre4 Comment pins.png" style="width:400px;"/>
+</img>
+<p>Finally, you can press <code>Ctrl+B</code> to open a new command palette mode. In this mode, you can browse a list of comments in the chart, and type to filter by comment text.</p>
+<img src="/img/2026-11-14/pre4 Comment Search.png" style="width:400px;"/>
+</img>
+<p>I hope these new features greatly improve the process of creating and refining charts.</p>
+<h2 id="h2-asynchronous-loading-screens" class="relative">
+    <div class="absolute heading-anchor" id="asynchronous-loading-screens"></div>
+    Asynchronous Loading Screens
+  </h2>
+  
+<p><em>by Eric</em></p>
+<p>One of the optimizations that I've wanted to make for years now is proper loading screens.</p>
+<p>As recently as the SPAGHETTI update, the game would just completely stop between a level being selected and actually entering it. It also used to be very naive about which assets to hold onto in memory when doing so.</p>
+<p>The solution to this is the new asynchronous loading system.</p>
+<p>Before major state transitions, players will now see a loading screen where the game does the following things:</p>
+<ul>
+<li>Gather up which assets are needed for the proceeding state</li>
+<li>Queue each asset to load in the background (in parallel with the main game)</li>
+<li>Display a progress bar on screen so the player knows the game is stable, active, and performing work, rather than not responding.</li>
+</ul>
+<p>This requires the loading screen to know about what textures, sounds, XML files, JSON files, etc. are going to be needed by the next state. For menus, this includes the graphics and fonts for the menu, the sound effects that play when selecting buttons, and more. For gameplay, this includes character assets, stage assets, song assets, note style assets, etc.</p>
+<p>Because computer logic can be complicated, the gameplay state and each major menu has a <code>queryAssets()</code> function that lists out all the assets it needs, so that the loading screen can efficiently load them all before they're needed. Any assets that weren't listed get dumped and reloaded from the next loading screen if they're needed. This effectively solves one of the game's most notorious issues: escalating memory usage during prolonged sessions across many songs.</p>
+<p>This system also effectively reduces the frequency of the game freezing when a necessary asset was not yet loaded. However, it requires that any scripted objects that use additional assets define a <code>queryAssets()</code> function that returns an array of AssetPaths it will use. The average character or stage won't need this (the JSON data will get scanned by default) but any character or stage that uses extra files (like the Week 3 stage's sound effects, or Nene's A-Bot sprites) will want to declare these. If they don't, the game will stutter since it's forced to stop everything it's doing to load the asset. Some platforms will even crash. Don't worry, there are debug tools to help devs figure out what assets get used without being declared.</p>
+<h2 id="h2-loading-screen-characters" class="relative">
+    <div class="absolute heading-anchor" id="loading-screen-characters"></div>
+    Loading Screen Characters
+  </h2>
+  
+<p>Hi there, it’s me, <strong>Abnormal</strong>… you know, the person who wrote a blog last year!</p>
+<p>Every video game has loading screens, even some simple games.
+Some go by really fast, and some take an ETERNITY (cough cough a certain game from 2006).
+Friday Night Funkin’, however, never really had a proper one!</p>
+<p>There WAS the loading screen on the HTML5 version of the game, which looked like this:</p>
+<img src="/img/2026-11-14/pre4 funkay.png" style="width:700px;"/>
+</img>
+<p>However, this never made it into the desktop version due to the way its assets were loaded on there.
+This art wouldn’t fit in very well if it was added today…</p>
+<p>So, we got back to the drawing board and concocted a simple, yet stylish loading screen!<br><br><br></p>
+<p><b><span style="font-size:20px">BEHOLD!</span></b></p>
+<img src="/img/2026-11-14/pre4 story loading.gif" style="width:1000px;"/>
+</img>
+<div align="center">
+  <i><span>Loading a song</span></i><br><br>
+</div>
+<img src="/img/2026-11-14/pre4 hot reload.gif" style="width:1000px;"/>
+</img>
+<div align="center">
+  <i><span>Hot reloading by pressing F5</span></i><br><br>
+</div>
+<p>Pretty cool, right? Let’s break it down.</p>
+<img src="/img/2026-11-14/pre4 new loading screen.png" style="width:1000px;"/>
+</img>
+<p>At the bottom right, you have a running character with a microphone stand that fills up as a progress bar.</p>
+<p>The running character is picked at random from a pool of available characters based on its weight value. The higher the weight, the higher the chance that character is loaded.</p>
+<p>Boyfriend and Girlfriend both have an equal weight of 400, so there’s a 50/50 chance you’ll see one or the other on each loading screen.</p>
+<p>Once the game picks a character… there they are!</p>
+<img src="/img/2026-11-14/pre4 loading runners.gif" style="width:500px;"/>
+</img>
+<div align="center">
+  <i><span>Never stop running little Boyfriend and Girlfriend</span></i><br><br>
+</div>
+<p>This system is set up in a very data-driven way, so you (yes, YOU) can mod in a running character very easily! Just follow the structure in <code>ui/loading/characters</code> and you’ll be good to go.</p>
+<p>Currently, it only supports sparrow assets, but this is subject to change! Eventually, you’ll be able to have packer and (if you’re psychotic enough to use it for a 24-frame animation) animate atlas sprites, it’s only a matter of time.<br><br><br></p>
+<p><b><span style="font-size:25px">BUT I’M NOT DONE YET!!</span></b></p>
+<img src="/img/2026-11-14/pre4 but wait.jpg" style="width:800px;"/>
+</img>
+<br>
+<h2 id="h2-polymod-upgrades" class="relative">
+    <div class="absolute heading-anchor" id="polymod-upgrades"></div>
+    Polymod Upgrades
+  </h2>
+  
+<p><em>by Abnormal</em></p>
+<p>We’ve been making strides at improving the game’s modding system. It’s called Polymod, you might’ve heard of it.</p>
+<p>Polymod has improved a lot ever since the release of Weekend 1 back in 2024, and that’s in large part thanks to our lovely contributors over on GitHub. They have submitted lots of significant improvements and additions to the library!</p>
+<p>As Polymod received more and more fixes, its scripting system has gotten closer and closer to the actual Haxe language.</p>
+<p>And, ladies and gentlemen… I think we’ve reached the endgame.<br><br><br></p>
+<p><b><span style="font-size:30px">BEHOLD!!!</span></b></p>
+<h3 id="h3-extend-anything-and-everything" class="relative">
+    <div class="absolute heading-anchor" id="extend-anything-and-everything"></div>
+    EXTEND ANYTHING AND EVERYTHING!
+  </h3>
+  
+<p>Previously, you could only extend a small set of classes. This was done through a macro that only ran on certain “wrapper classes”. The team needed to manually create these “wrapper classes”, so making new classes extendable was a bit tedious.</p>
+<p>But now, thanks to our contributor KoloInDaCrib… we don’t need to do that anymore! Basically every single class is extendable with the mindblowing technology of running a NEW and shiny macro on every class!</p>
+<p>Please use this new power responsibly. I cannot be held responsible for anything that will definitely emerge with this newfound ability.</p>
+<p>As we continue improving Polymod, some things will inevitably be broken along the way. It’s important to maintain good code quality, because scripts often break due to accidentally utilizing bugs that were previously present in the scripting system.</p>
+<p>Did you know that a new compiler define was recently added to help with code quality? You should try compiling the game with <code>POLYMOD_STRICT_SYNTAX​​</code> sometime; it enforces stricter checking in scripts to ensure that they’re much closer to real Haxe, which should help make your scripts more resilient each time we update Polymod.</p>
+<p>Maintaining a modding system is tough; but as time goes on, we aim to break fewer mods with each update!</p>
+<img src="/img/2026-11-14/pre4 Abnormal.gif" style="width:1000px;"/>
+</img>
+<p>And as we always say… umm…<br></p>
+<p>I actually forgot.<br></p>
+<p>… well, scratch that for now.<br><br><br><br><br><br><br><br></p>
+<p>Don’t worry Abnormal, I remember!</p>
+<h2 id="h2-how-can-i-try-this-for-myself" class="relative">
+    <div class="absolute heading-anchor" id="how-can-i-try-this-for-myself"></div>
+    How can I try this for myself?
+  </h2>
+  
+<p>Hey, it’s Hundrec again to drop the test builds.</p>
+<p>These features will only be officially released with the next major update, but you can try all of them <strong>right now</strong> in our newest test build, for both Desktop and Mobile platforms!</p>
+<p>Keep in mind, you can access the Editors on Desktop platforms by pressing the tilde key (~), and the Mod Menu on all platforms by going to the Options Menu.</p>
+<p><strong>[WINDOWS]</strong> Mod Menu Playtest Build (v0.9 Feature Preview #4) - <a rel="external" href="https://drive.google.com/file/d/1VqjH8hih5lcFcgu8bU2u3HmGqIfB22NJ/view?usp=drive_link">Google Drive</a> | <a rel="external" href="https://www.dropbox.com/scl/fo/jffl8gwx0q4eevkgib9ai/AA8f0DQXg23pUub8VPY9L0o?rlkey=5cu00yqpdd8x094akpcib9n7a&amp;st=khpdi7li&amp;dl=0">Dropbox</a></p>
+<p><strong>[MACOS]</strong> Mod Menu Playtest Build (v0.9 Feature Preview #4) - <a rel="external" href="https://drive.google.com/file/d/1WVuYsB3yRZZsZJ52tKx5rsxw5Iq7TYmm/view?usp=drive_link">Google Drive</a> | <a rel="external" href="https://www.dropbox.com/scl/fo/jffl8gwx0q4eevkgib9ai/AA8f0DQXg23pUub8VPY9L0o?rlkey=5cu00yqpdd8x094akpcib9n7a&amp;st=khpdi7li&amp;dl=0">Dropbox</a></p>
+<p><strong>[LINUX]</strong> Mod Menu Playtest Build (v0.9 Feature Preview #4) - <a rel="external" href="https://drive.google.com/file/d/1EV4AefG14Esds-2gn-I8CEnOJ-KO1QRx/view?usp=drive_link">Google Drive</a> | <a rel="external" href="https://www.dropbox.com/scl/fo/jffl8gwx0q4eevkgib9ai/AA8f0DQXg23pUub8VPY9L0o?rlkey=5cu00yqpdd8x094akpcib9n7a&amp;st=khpdi7li&amp;dl=0">Dropbox</a></p>
+<p><strong>[iOS]</strong> Preview #4 on TestFlight - <a rel="external" href="https://testflight.apple.com/join/B3Fa3uut">TestFlight link</a></p>
+<p><strong>[ANDROID]</strong> Preview #4 on Google Play - <a rel="external" href="https://play.google.com/store/apps/details?id=me.funkin.fnf">Sign Up on Google Play Store Page</a></p>
+<p><strong>CPPIA SDK</strong> (for modders; all platforms) - <a rel="external" href="https://drive.google.com/drive/folders/1Pyn2e1qK1ZNNtvJ3tejHc4hrLezM31Qz?usp=drive_link">Google Drive</a> | <a rel="external" href="https://www.dropbox.com/scl/fo/18m2pbmai85irv6qy0ngh/AKEhSG0mbQX-FMgnCDHEjxs?rlkey=7etdaa6g7lsq364u7vfiscgb9&amp;st=2e4sk6ee&amp;dl=0">Dropbox</a></p>
+<p>We invite you to download this build, try it out with all your mods, and give us your feedback! You can contribute to development by reporting bugs and leaving suggestions on our <a rel="external" href="https://github.com/FunkinCrew/Funkin/issues">GitHub issues page</a>.</p>
+<p>As we continue to work on the next major update (coming December 30th!), we will improve the game based on your valuable feedback.</p>
+<p>Now here’s a song to listen to while you download the new build, courtesy of <strong>Phantom Arcade</strong>!</p>
+<div >
+  <iframe style=" width: 100%; height: 480px;"
+    src="https://www.youtube-nocookie.com/embed/B95c8V_mbCE"
+    webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+<p>Have fun!<br>
+<em>Hundrec and the team</em> 💯</p>
+
+
+  <script>
+    const toc = document.getElementsByClassName('sticky toc')[0];
+    const close_toc = () => toc.open = false;
+
+    const h1 = document.getElementsByTagName('h1');
+  </script>
+
+</article>
+
+<div class="flex flex-row gap-2 my-4">
+
+  
+  <button type="button" width="100%" onclick="window.location.href='https:&#x2F;&#x2F;funkin.me&#x2F;blog&#x2F;2026-08-03&#x2F;'" class="px-4 py-3 bg-primary text-white rounded-lg grow basis-0">
+    Previous Post <br> WEEK OF 2026&#x2F;08&#x2F;03 - Introducing: The Mod Menu
+  </button>
+  
+
+  <button type="button" width="100%" onclick="window.location.href='https://funkin.me/blog/'" class="px-4 py-3 bg-primary text-white rounded-lg grow basis-0">
+    Return to blog
+  </button>
+
+  
+
+</div>
+
+
+  </main>
+
+  <footer class="my-8">
+    <div class="flex flex-row justify-center gap-1">
+      <a href="https://www.youtube.com/@FNF_Developers">
+        <i class="i-mdi-youtube"></i>
+      </a>
+      <a href="https://x.com/fnf_developers">
+        <i class="i-mdi-twitter"></i>
+      </a>
+      <a href="https://github.com/FunkinCrew">
+        <i class="i-mdi-github"></i>
+      </a>
+    </div>
+    <!--div align='center'>
+      <a href='https://www.free-website-hit-counter.com'>
+        <img src='https://www.free-website-hit-counter.com/c.php?d=9&id=145132&s=36' border='0'
+          alt='Free Website Hit Counter'>
+      </a>
+      <br />
+      <small>
+        <a href='https://www.free-website-hit-counter.com' title="Free Website Hit Counter">
+          Free website hit counter
+        </a>
+      </small>
+  </div-->
+  </footer>
+
+</body>
+
+</html>
